@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <!-- Background Gradient matching dark theme #202329 to #17191C -->
+    <linearGradient id="favBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#242830"/>
+      <stop offset="100%" stop-color="#14161A"/>
+    </linearGradient>
+
+    <!-- Border Gradient with crisp #7CA9E8 sky-blue accent highlight -->
+    <linearGradient id="favBorder" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7CA9E8" stop-opacity="0.95"/>
+      <stop offset="45%" stop-color="#363C45"/>
+      <stop offset="100%" stop-color="#23272F"/>
+    </linearGradient>
+
+    <!-- Front Peak Accent Gradient -->
+    <linearGradient id="favPeakFront" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#A3C4F3"/>
+      <stop offset="100%" stop-color="#5E92DB"/>
+    </linearGradient>
+
+    <!-- Back Peak Gradient -->
+    <linearGradient id="favPeakBack" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4B6C96"/>
+      <stop offset="100%" stop-color="#26374D"/>
+    </linearGradient>
+
+    <!-- Radiant Sun / Lens Gradient -->
+    <linearGradient id="favSun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#8BB8F5"/>
+    </linearGradient>
+
+    <!-- Inner frame clip for clean edges -->
+    <clipPath id="favInnerClip">
+      <rect x="3" y="3" width="58" height="58" rx="15"/>
+    </clipPath>
+  </defs>
+
+  <!-- Base Squircle -->
+  <rect x="2.5" y="2.5" width="59" height="59" rx="15" fill="url(#favBg)" stroke="url(#favBorder)" stroke-width="2.5"/>
+
+  <!-- Gallery Scenery clipped inside squircle -->
+  <g clip-path="url(#favInnerClip)">
+    <!-- Soft ambient glow -->
+    <ellipse cx="32" cy="12" rx="28" ry="16" fill="#7CA9E8" fill-opacity="0.08"/>
+
+    <!-- Radiant Sun -->
+    <circle cx="43.5" cy="20.5" r="5.5" fill="url(#favSun)"/>
+
+    <!-- Back Peak -->
+    <path d="M26 49 L39.2 28.4 C40.1 27 42.1 27 43 28.4 L55 49 Z" fill="url(#favPeakBack)"/>
+
+    <!-- Front Peak -->
+    <path d="M9 49 L23.5 24 C24.5 22.3 27 22.3 28 24 L42 49 Z" fill="url(#favPeakFront)"/>
+
+    <!-- Baseline Accent -->
+    <path d="M8 49.5 H56" stroke="#7CA9E8" stroke-width="2" stroke-linecap="round" stroke-opacity="0.75"/>
+  </g>
+</svg>
